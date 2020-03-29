@@ -121,6 +121,7 @@ func correctFileContent(fileName string) (time.Time, time.Time) {
 		dateCreated      time.Time
 		dateLastModified time.Time
 	)
+	writer.WriteString("/******************************************************************************/\r\n")
 	for reader.Scan() {
 		l := reader.Text()
 		if isBrokenLine(l) {
