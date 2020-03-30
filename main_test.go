@@ -124,3 +124,11 @@ func TestCreateFileName2(t *testing.T) {
 		t.Errorf("actual %v / expected: %v", actual, expected)
 	}
 }
+
+func TestIsBrokenLine1(t *testing.T) {
+	actual := isBrokenLine("GP7")
+	expected := true
+	if actual != expected {
+		t.Errorf("actual %v / expected: %v", actual, expected)
+	}
+}

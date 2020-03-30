@@ -34,10 +34,10 @@ func correctDate(s string) (string, error) {
 
 func isBrokenLine(s string) bool {
 	if s[0] != '$' {
-		return false
+		return true
 	}
 	if len(s)-3 < 0 || s[len(s)-3] != '*' {
-		return false
+		return true
 	}
 	return fmt.Sprintf("%02X", calcCheckSum(s[1:len(s)-3])) != s[len(s)-2:]
 }
